@@ -36,5 +36,23 @@ while True:
         for song in songs:
             print(", ".join(song))
 
+    elif option == "read_state":
+        Utils.clean_console()
+        songs = Playlist.get_songs()
+
+        if len(songs) == 0:
+            print("** La lista de reproducción está vacía **\n")
+            continue
+        
+        print("** Estado de la lista de reproducción **\n")
+
+        print(f"Total de canciones: {len(songs)} \n")
+
+        print("Ultimas 2 canciones agregadas:\n")
+        print(", ".join(HEADERS))
+
+        for song in songs[-2:]:
+            print(", ".join(song))
+
     elif option == "exit":
         break

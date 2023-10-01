@@ -22,7 +22,8 @@ class Utils:
 Elige qué quieres hacer:
 (1). Agregar nueva canción.
 (2). Ver canciones de la playlist.
-(3). Salir.
+(3). Ver estado de la playlist.
+(4). Salir.
 """
         )
 
