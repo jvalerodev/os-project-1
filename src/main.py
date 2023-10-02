@@ -47,14 +47,13 @@ while True:
             continue
         
         print("** Estado de la lista de reproducción **\n")
-
-        print(f"Total de canciones: {len(songs)} \n")
-
-        print("Ultimas 2 canciones agregadas:\n")
+        print(f"- Total de canciones: {len(songs)} \n")
+        print("- Últimas dos canciones agregadas: \n\n")
         print(", ".join(HEADERS))
 
         for song in songs[-2:]:
             print(", ".join(song))
+
 
     elif option == "exit":
         break
