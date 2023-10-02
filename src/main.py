@@ -5,6 +5,8 @@ from utils.consts import HEADERS
 
 print("--- Reproductor de Música ---")
 
+# The code is creating a loop that will continue running until the user chooses to exit. Inside the
+# loop, it displays a menu using the `Utils.print_menu()` function and prompts the user for an option.
 while True:
     Utils.print_menu()
     option = Utils.get_action(input("-Opción: "))
