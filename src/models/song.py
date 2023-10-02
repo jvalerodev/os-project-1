@@ -1,6 +1,8 @@
 from datetime import datetime
 
 
+# The class "Song" allows the user to input information about a song, such as title, interpreter,
+# album, date added, user, and duration.
 class Song:
     def __init__(self):
         self.title = input("-Título: ")
