@@ -6,9 +6,10 @@ from .consts import ACTIONS
 # action based on an option.
 class Utils:
     """
-        The function `clean_console` clears the console screen in Python, using different commands depending
-        on the operating system.
+    The function `clean_console` clears the console screen in Python, using different commands depending
+    on the operating system.
     """
+
     @staticmethod
     def clean_console():
         OS = os.name
@@ -25,6 +26,7 @@ class Utils:
         The function `print_menu()` prints a menu with options for adding a new song, viewing the songs in
         the playlist, checking the playlist's status, or exiting the program.
     """
+
     @staticmethod
     def print_menu():
         print(
@@ -44,6 +46,7 @@ Elige qué quieres hacer:
         
         @return The value associated with the given option in the ACTIONS dictionary.
     """
+
     @staticmethod
     def get_action(option: str):
         return ACTIONS.get(option)

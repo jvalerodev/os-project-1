@@ -9,14 +9,15 @@ from utils.consts import PLAYLIST_FILE, LOCK_FILE
 # manage a write lock to prevent concurrent writes.
 class Playlist:
     """
-        The `add_song` function adds a song to a playlist, checking for existing songs and handling file
-        writing and locking.
-        
-        @param song The `song` parameter is an instance of the `Song` class. It represents a song that
-        needs to be added to the playlist.
-        
-        @return None
+    The `add_song` function adds a song to a playlist, checking for existing songs and handling file
+    writing and locking.
+
+    @param song The `song` parameter is an instance of the `Song` class. It represents a song that
+    needs to be added to the playlist.
+
+    @return None
     """
+
     @staticmethod
     def add_song(song: Song):
         while Playlist.is_locked():
@@ -46,10 +47,11 @@ class Playlist:
             print(error)
 
     """
-        The above function reads a CSV file containing songs and returns a list of songs.
+        The `get_songs` function reads a CSV file containing songs and returns a list of songs.
         
         @return a list of songs.
     """
+
     @staticmethod
     def get_songs():
         try:
@@ -74,6 +76,7 @@ class Playlist:
         @return a boolean value. It returns True if there is a song in the list of songs that has the same
         title as the given title parameter, and False otherwise.
     """
+
     @staticmethod
     def check_existing_songs(title: str, songs: list[list[str]]):
         return any(song[0] == title for song in songs)
@@ -85,6 +88,7 @@ class Playlist:
         @return The method is returning a boolean value. If the lock file does not exist, it creates the
         lock file and returns False.
     """
+
     @staticmethod
     def is_locked():
         if not os.path.exists(LOCK_FILE):
@@ -96,6 +100,7 @@ class Playlist:
     """
         The `release_write_lock` function removes a lock file if it exists.
     """
+
     @staticmethod
     def release_write_lock():
         if os.path.exists(LOCK_FILE):

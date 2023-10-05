@@ -45,7 +45,7 @@ while True:
         if len(songs) == 0:
             print("** La lista de reproducción está vacía **\n")
             continue
-        
+
         print("** Estado de la lista de reproducción **\n")
         print(f"- Total de canciones: {len(songs)} \n")
         print("- Últimas dos canciones agregadas: \n\n")
@@ -53,7 +53,6 @@ while True:
 
         for song in songs[-2:]:
             print(", ".join(song))
-
 
     elif option == "exit":
         break
