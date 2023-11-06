@@ -8,6 +8,6 @@ class Song:
         self.title = input("-Título: ")
         self.interpreter = input("-Intérprete: ")
         self.album = input("-Álbum: ")
-        self.date_added = datetime.now()
+        self.date_added = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self.user = input("-Tu nombre de usuario: ")
         self.duration = input("-Duración: ")

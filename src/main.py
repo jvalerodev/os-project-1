@@ -1,7 +1,8 @@
 from models.song import Song
-from models.playlist import Playlist
+from services.playlist import PlaylistService
 from utils.functions import Utils
 from utils.consts import HEADERS
+
 
 print("--- Reproductor de Música ---")
 
@@ -21,12 +22,11 @@ while True:
 
         song = Song()
         Utils.clean_console()
-
-        Playlist.add_song(song)
+        PlaylistService.add_song(song)
 
     elif option == "read":
         Utils.clean_console()
-        songs = Playlist.get_songs()
+        songs = PlaylistService.get_songs()
 
         if len(songs) == 0:
             print("** La lista de reproducción está vacía **\n")
@@ -40,15 +40,15 @@ while True:
 
     elif option == "read_state":
         Utils.clean_console()
-        songs = Playlist.get_songs()
+        songs = PlaylistService.get_songs()
 
         if len(songs) == 0:
             print("** La lista de reproducción está vacía **\n")
             continue
 
         print("** Estado de la lista de reproducción **\n")
-        print(f"- Total de canciones: {len(songs)} \n")
-        print("- Últimas dos canciones agregadas: \n\n")
+        print(f"- Total de canciones: {len(songs)}")
+        print("- Últimas dos canciones agregadas: \n")
         print(", ".join(HEADERS))
 
         for song in songs[-2:]:
