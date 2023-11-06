@@ -27,6 +27,12 @@ source venv/bin/activate
 
 ## **Usage**
 
+Start the server:
+
+```
+python src/server.py
+```
+
 Run the application:
 
 ```

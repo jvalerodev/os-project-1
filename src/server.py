@@ -14,6 +14,16 @@ class Server:
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.lock = threading.Lock()
 
+    """
+        The `client_handler` function receives requests from a client socket, processes them, and sends back
+        appropriate responses.
+
+        @param client_socket The `client_socket` parameter is a Socket object that represents the connection
+        between the server and the client. It is used to send and receive data between the two.
+
+        @return None
+    """
+
     def client_handler(self, client_socket: Socket):
         while True:
             request = client_socket.recv(1024).decode()
