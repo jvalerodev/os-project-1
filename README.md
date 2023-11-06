@@ -1,4 +1,4 @@
-# SO - Project 1
+# OS - Project 1
 
 ## Prerequisites
 
@@ -26,6 +26,12 @@ source venv/bin/activate
 ```
 
 ## **Usage**
+
+Start the server:
+
+```
+python src/server.py
+```
 
 Run the application:
 
