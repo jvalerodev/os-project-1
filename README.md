@@ -1,4 +1,4 @@
-# SO - Project 1
+# OS - Project 1
 
 ## Prerequisites
 
