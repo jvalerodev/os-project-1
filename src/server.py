@@ -58,6 +58,7 @@ class Server:
                     )
 
             elif request == "read":
+                print("Obteniendo playlist...")
                 songs = Playlist.get_songs()
                 client_socket.send(json.dumps(songs).encode())
 
